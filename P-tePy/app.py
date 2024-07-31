@@ -88,11 +88,14 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
-        if user and bcrypt.check_password_hash(user.password, form.password.data):
-            login_user(user)
-            return redirect(url_for('dashboard'))
+        if user:
+            if bcrypt.check_password_hash(user.password, form.password.data):
+                login_user(user)
+                return redirect(url_for('dashboard'))
+            else:
+                flash('Mot de passe incorrect', 'danger')
         else:
-            flash('Nom d’utilisateur ou mot de passe incorrect', 'danger')
+            flash('Nom d’utilisateur inexistant', 'danger')
     return render_template('login.html', form=form)
 
 @app.route('/dashboard')
