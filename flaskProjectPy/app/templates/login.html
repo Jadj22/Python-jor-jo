@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='global-style.css') }}">
+</head>
+
+<body>
+    <div class="container-login">
+        <h1>Page de Connexion</h1>
+
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.username.label }}
+                {{ form.username(class_="form-control") }}
+            </div>
+            <div>
+                {{ form.password.label }}
+                {{ form.password(class_="form-control") }}
+            </div>
+            <div>
+                {{ form.submit(class_="btn") }}
+            </div>
+        </form>
+
+        <a href="{{ url_for('register') }}">Pas encore de compte ? Inscrivez-vous</a>
+    </div>
+</body>
+
+</html>
