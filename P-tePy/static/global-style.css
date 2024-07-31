@@ -1,0 +1,264 @@
+/* Styles généraux */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.error-message {
+    color: #d9534f; /* Rouge pour les messages d'erreur */
+    font-size: 0.875em;
+    margin-top: 5px; /* Espacement au-dessus du message d'erreur */
+    padding: 5px;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    background-color: #f2dede;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #005bb5;
+}
+
+/* Styles spécifiques au tableau de bord */
+.container-dashboard {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+}
+
+.container-dashboard h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.container-dashboard .users-list,
+.container-dashboard .other-features {
+    margin-top: 30px;
+}
+
+.container-dashboard .users-list ul,
+.container-dashboard .other-features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container-dashboard .user {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.container-dashboard .other-features li {
+    margin: 10px 0;
+}
+
+/* Styles spécifiques à l'aide */
+.container-help {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.container-help h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container-help p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Styles spécifiques à l'accueil */
+.container-home {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.container-home h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styles spécifiques à la connexion */
+.container-login {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.container-login form div {
+    margin-bottom: 15px;
+}
+
+.container-login label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.container-login input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.container-login .btn {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container-login .btn:hover {
+    background-color: #005bb5;
+}
+
+/* Styles spécifiques au profil */
+.container-profile {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.container-profile h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container-profile p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Styles spécifiques à l'enregistrement */
+.container-register {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.container-register form div {
+    margin-bottom: 15px;
+}
+
+.container-register label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.container-register input[type="text"],
+.container-register input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container-register input[type="submit"] {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container-register input[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+/* Styles spécifiques aux paramètres */
+.container-setting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.container-setting h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container-setting p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #666;
+}
+
+.container-setting a {
+    font-size: 1em;
+    color: #0066cc;
+    text-decoration: none;
+    background-color: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.container-setting a:hover {
+    background-color: #ccc;
+}
