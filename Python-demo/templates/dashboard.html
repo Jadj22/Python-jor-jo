@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='global-style.css') }}">
+</head>
+<body>
+    <div class="container-dashboard">
+        <h1>Bonjour, vous êtes connecté.</h1>
+        <a href="{{ url_for('logout') }}">Cliquez ici pour vous déconnecter</a>
+
+        <div class="users-list">
+            <h2>Liste des utilisateurs connectés</h2>
+            {% if users %}
+                <ul>
+                    {% for user in users %}
+                        <li class="user">{{ user.username }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Aucun utilisateur connecté.</p>
+            {% endif %}
+        </div>
+
+        <div class="other-features">
+            <h2>Autres fonctionnalités</h2>
+            <ul>
+                <li><a href="{{ url_for('profile') }}">Voir mon profil</a></li>
+                <li><a href="{{ url_for('settings') }}">Paramètres</a></li>
+                <li><a href="{{ url_for('help') }}">Aide</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
